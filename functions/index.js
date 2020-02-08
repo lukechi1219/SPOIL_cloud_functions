@@ -14,5 +14,7 @@ exports.helloWorld = functions.https.onRequest(async (request, response) => {
   const fileResponse = await fetch(url);
   const fileText = await fileResponse.text();
 
+// https://medium.com/@Tim_Ebbers/import-a-file-to-gcp-cloud-storage-using-cloud-functions-9cf81db353dc
+
   response.send('Hello from Firebase = ' + fileText.split('\r\n').length);
 });
